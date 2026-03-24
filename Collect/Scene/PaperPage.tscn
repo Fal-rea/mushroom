@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c3onsitrupcl3"]
+
+[ext_resource type="Script" uid="uid://bl6ghitxy0lij" path="res://Collect/Script/PaperPage.gd" id="1_8hobt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtsy6"]
+bg_color = Color(0.88, 0.88, 0.88, 1)
+
+[node name="Panel" type="Panel" unique_id=1752765612]
+offset_right = 480.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtsy6")
+script = ExtResource("1_8hobt")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1932700746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=779055147]
+layout_mode = 2
+
+[node name="ContentLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1179222456]
+layout_mode = 2
+text = "lsjdjchvabc"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1134321231]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+alignment = 1
+
+[node name="Last" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=300277606]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Next" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1761220569]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2

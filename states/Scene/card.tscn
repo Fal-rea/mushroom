@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://k63tnd6js0vs"]
+
+[ext_resource type="Texture2D" uid="uid://ccpbpjktersg7" path="res://states/asset/icon.svg" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://bf8skexwcb0j8" path="res://states/Script/CardUI.gd" id="1_rjlel"]
+[ext_resource type="PackedScene" uid="uid://ba072bkvse25" path="res://states/Scene/card_state_machines.tscn" id="3_7q56u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kikvd"]
+size = Vector2(119, 158)
+
+[node name="CardUI" type="Control" unique_id=1273267684]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 160.0
+script = ExtResource("1_rjlel")
+
+[node name="Panel" type="Panel" parent="." unique_id=1576411522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="color" type="ColorRect" parent="Panel" unique_id=1615159771]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041666668
+anchor_top = 0.0333333
+anchor_right = 0.9583333
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="pic" type="TextureRect" parent="Panel/color" unique_id=816470088]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25454548
+anchor_top = 0.20227276
+anchor_right = 0.75454545
+anchor_bottom = 0.5772727
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kikvd")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="name" type="Label" parent="Panel/color" unique_id=515642789]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.24545456
+anchor_top = 0.63863635
+anchor_right = 0.7818182
+anchor_bottom = 0.82954544
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.94509804)
+theme_override_font_sizes/font_size = 20
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DropPointDetector" type="Area2D" parent="." unique_id=175731554]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector" unique_id=1241152300]
+light_mask = 2
+position = Vector2(60, 80)
+shape = SubResource("RectangleShape2D_kikvd")
+
+[node name="CardStateMachines" parent="." unique_id=15981025 instance=ExtResource("3_7q56u")]
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="DropPointDetector" to="." method="_on_drop_point_detector_area_entered"]
+[connection signal="area_exited" from="DropPointDetector" to="." method="_on_drop_point_detector_area_exited"]

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://qhberswmxe2j"]
+
+[ext_resource type="Texture2D" uid="uid://bjme3shsbciou" path="res://asset/icon.svg" id="1_7uxy0"]
+
+[node name="Control" type="Control" unique_id=94797455]
+layout_mode = 3
+anchor_right = 0.39609376
+anchor_bottom = 0.99589276
+offset_bottom = 6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1258171366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1667220713]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1015873
+anchor_top = 0.040404037
+anchor_right = 0.26031747
+anchor_bottom = 0.1609673
+texture = ExtResource("1_7uxy0")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=492163330]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2777778
+anchor_top = 0.048260383
+anchor_right = 0.6047619
+anchor_bottom = 0.13916947
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "My Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1730544675]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0015873016
+anchor_top = 0.0011223345
+anchor_right = 0.022222223
+anchor_bottom = 0.99887764
+grow_vertical = 2
+color = Color(0.1882353, 0.24313726, 0.68235296, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=210989218]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023809524
+anchor_top = 0.25813693
+anchor_right = 0.9968254
+anchor_bottom = 0.26599327
+grow_horizontal = 2
+color = Color(0.9500203, 0.91890687, 0.21697383, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1339585548]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023809524
+anchor_top = 0.55780023
+anchor_right = 0.9936508
+anchor_bottom = 0.56341195
+grow_horizontal = 2
+color = Color(0.9500203, 0.91890687, 0.21697383, 1)
+metadata/_edit_use_anchors_ = true
